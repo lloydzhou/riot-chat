@@ -26,13 +26,17 @@
     var socket = opts.socket,
         $this = this;
 
-    this.send = function() {
+    send (e) {
       //socket.emit('chat-message', {
       //  from: $this.me,
       //  content: this.message.value
       //});
+      console.log($this.message.value)
+      //socket.sendMessage(JSON.stringify({nick: 'test', text: $this.message.value}), function(){
+      socket.sendMessage($this.message.value, function(){
+          $this.message.value = ""
+      })
 
-      this.message.value = ""
       return false;
     }
 
