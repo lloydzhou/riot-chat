@@ -1,0 +1,20 @@
+{
+  "name": "riot-chat",
+  "version": "0.0.1",
+  "description": "riot-chat",
+  "scripts": {
+    "build": "browserify -t riotify lib/index.js | uglifyjs -o pub/application.js",
+    "watch": "watchify -t riotify lib/index.js -do pub/application.js"
+  },
+  "author": "",
+  "license": "MIL",
+  "dependencies": {
+    "riot": "^2.2.4"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "riotify": "^0.1.2",
+    "uglify-js": "^2.4.24",
+    "watchify": "^3.3.1"
+  }
+}

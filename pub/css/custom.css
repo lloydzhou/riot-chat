@@ -1,0 +1,6 @@
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    .container {
+        width: 100%;
+    }
+}
